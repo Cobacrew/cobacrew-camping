@@ -1,0 +1,30 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { id: post.id },
+		props: { post },
+	}));
+}
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+	<article>
+		<h1>{post.data.title}</h1>
+		<p class="disclosure-note">
+			Some links in this guide may be affiliate links. If you buy through them, Cobacrew
+			Camping may earn a small commission at no extra cost to you. See our <a href="/disclosure">full disclosure</a>.
+		</p>
+		<Content />
+	</article>
+</Layout>

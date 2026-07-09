@@ -1,0 +1,124 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Cobacrew Camping</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a class="brand" href="/">Cobacrew Camping</a>
+				<a href="/">Guides</a>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<p>Cobacrew Camping helps beginners gear up for car camping without overspending.</p>
+			<p><a href="/disclosure">Affiliate disclosure</a></p>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: light;
+		--ink: #1f2a20;
+		--ink-muted: #52604f;
+		--bg: #fbfaf5;
+		--accent: #3b6d11;
+		--border: #e1ddcc;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+		font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+		color: var(--ink);
+		background: var(--bg);
+		line-height: 1.65;
+	}
+	header {
+		border-bottom: 1px solid var(--border);
+	}
+	nav {
+		max-width: 780px;
+		margin: 0 auto;
+		padding: 1rem 1.25rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	nav .brand {
+		font-weight: 700;
+		font-size: 1.1rem;
+		color: var(--ink);
+		text-decoration: none;
+	}
+	nav a {
+		color: var(--ink-muted);
+		text-decoration: none;
+	}
+	main {
+		max-width: 780px;
+		margin: 0 auto;
+		padding: 2rem 1.25rem 3rem;
+	}
+	footer {
+		border-top: 1px solid var(--border);
+		padding: 1.5rem 1.25rem;
+		text-align: center;
+		color: var(--ink-muted);
+		font-size: 0.9rem;
+	}
+	footer a {
+		color: var(--accent);
+	}
+	h1, h2, h3 {
+		line-height: 1.25;
+	}
+	a {
+		color: var(--accent);
+	}
+	.card {
+		display: block;
+		padding: 1.25rem;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		text-decoration: none;
+		color: inherit;
+		margin-bottom: 1rem;
+		background: #fff;
+	}
+	.card h2 {
+		margin: 0 0 0.4rem;
+		font-size: 1.15rem;
+		color: var(--ink);
+	}
+	.card p {
+		margin: 0;
+		color: var(--ink-muted);
+	}
+	.disclosure-note {
+		font-size: 0.85rem;
+		color: var(--ink-muted);
+		border-left: 3px solid var(--border);
+		padding: 0.5rem 0.9rem;
+		margin: 1.25rem 0;
+		background: #fff;
+	}
+</style>
