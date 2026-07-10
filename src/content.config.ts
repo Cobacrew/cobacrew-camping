@@ -22,6 +22,7 @@ const blog = defineCollection({
 					price: z.string(),
 					why: z.string(),
 					url: z.string(),
+					image: z.string().optional(),
 				})
 			)
 			.optional(),

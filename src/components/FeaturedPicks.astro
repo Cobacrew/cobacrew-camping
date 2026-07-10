@@ -4,6 +4,7 @@ interface Pick {
 	price: string;
 	why: string;
 	url: string;
+	image?: string;
 }
 
 interface Props {
@@ -18,15 +19,48 @@ const { picks } = Astro.props;
 		<div class="featured-picks">
 			{picks.map((pick) => (
 				<div class="featured-pick">
-					<span class="featured-pick-label">Our pick</span>
-					<h3>{pick.name}</h3>
-					<p class="price">{pick.price}</p>
-					<p class="why">{pick.why}</p>
-					<a class="buy" href={pick.url} target="_blank" rel="nofollow sponsored noopener">
-						Check price on Amazon
-					</a>
+					{pick.image && (
+						<img class="featured-pick-image" src={pick.image} alt={pick.name} width="400" height="600" />
+					)}
+					<div class="featured-pick-body">
+						<span class="featured-pick-label">Our pick</span>
+						<h3>{pick.name}</h3>
+						<p class="price">{pick.price}</p>
+						<p class="why">{pick.why}</p>
+						<a class="buy" href={pick.url} target="_blank" rel="nofollow sponsored noopener">
+							Check price on Amazon
+						</a>
+					</div>
 				</div>
 			))}
 		</div>
 	)
 }
+
+<style>
+	.featured-pick {
+		display: flex;
+		gap: 1.25rem;
+		align-items: flex-start;
+	}
+	.featured-pick-image {
+		width: 110px;
+		height: auto;
+		aspect-ratio: 2 / 3;
+		object-fit: cover;
+		border-radius: 10px;
+		flex-shrink: 0;
+	}
+	.featured-pick-body {
+		flex: 1;
+		min-width: 0;
+	}
+	@media (max-width: 480px) {
+		.featured-pick {
+			flex-direction: column;
+		}
+		.featured-pick-image {
+			width: 140px;
+		}
+	}
+</style>

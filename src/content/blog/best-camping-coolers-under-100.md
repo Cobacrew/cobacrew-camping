@@ -12,6 +12,7 @@ featuredPicks:
     price: "$55"
     why: "Over 16,000 reviews and rated Amazon's top pick for temperature retention — wheels make it easy to move once it's loaded with ice."
     url: "https://amzn.to/4gvZcku"
+    image: "/pins/best-camping-coolers-under-100-pick.jpg"
 ---
 
 Premium rotomolded coolers can hold ice for a week and cost $300+. For a weekend or two a month, that's overkill. Here's what to look for under $100, and where the real tradeoffs are.

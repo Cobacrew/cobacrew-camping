@@ -14,6 +14,7 @@ featuredPicks:
     price: "$45"
     why: "Amazon's Overall Pick in this category — synthetic fill, mummy shape for real cold-night warmth, 4.6 stars, and comfortably under budget."
     url: "https://amzn.to/3RqmwG4"
+    image: "/pins/best-sleeping-bags-under-50-pick.jpg"
 ---
 
 Sleeping bags are one of the few items where getting it wrong doesn't just mean discomfort — a bag that's too warm-rated for the night you're actually camping means a genuinely miserable, cold sleep. Here's how to buy right under $50.
