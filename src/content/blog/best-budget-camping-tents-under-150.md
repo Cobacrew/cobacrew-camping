@@ -2,6 +2,11 @@
 title: "Best budget camping tents under $150"
 description: "Solid car camping tents under $150 for beginners, picked for weather resistance and easy setup rather than ultralight weight."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Budget camping tents"
+    query: "car camping tent under 150"
+  - label: "Tent footprints"
+    query: "tent footprint"
 ---
 
 Ultralight backpacking tents can run $400+ because every ounce is engineered away. Car campers don't need that — you need something that goes up fast, keeps rain out, and survives a few seasons. Here's what to actually look for under $150, and the tradeoffs at that price point.

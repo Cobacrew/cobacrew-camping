@@ -1,0 +1,71 @@
+---
+const ASSOCIATE_TAG = 'cobacrewcamp2-20';
+
+interface Link {
+	label: string;
+	query: string;
+}
+
+interface Props {
+	links?: Link[];
+}
+
+const { links } = Astro.props;
+
+function amazonSearchUrl(query: string) {
+	return `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=${ASSOCIATE_TAG}`;
+}
+---
+
+{
+	links && links.length > 0 && (
+		<aside class="amazon-links">
+			<p class="amazon-links-title">Shop this guide on Amazon</p>
+			<div class="amazon-links-buttons">
+				{links.map((link) => (
+					<a
+						href={amazonSearchUrl(link.query)}
+						target="_blank"
+						rel="nofollow sponsored noopener"
+					>
+						{link.label}
+					</a>
+				))}
+			</div>
+		</aside>
+	)
+}
+
+<style>
+	.amazon-links {
+		background: #fff;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 1.1rem 1.25rem;
+		margin: 1.75rem 0;
+	}
+	.amazon-links-title {
+		margin: 0 0 0.7rem;
+		font-weight: 600;
+		font-size: 0.95rem;
+		color: var(--ink);
+	}
+	.amazon-links-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+	}
+	.amazon-links-buttons a {
+		display: inline-block;
+		padding: 0.5rem 0.9rem;
+		background: var(--accent);
+		color: #fff;
+		border-radius: 7px;
+		text-decoration: none;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+	.amazon-links-buttons a:hover {
+		opacity: 0.9;
+	}
+</style>

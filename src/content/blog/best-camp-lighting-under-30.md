@@ -2,6 +2,11 @@
 title: "Best camp lighting under $30"
 description: "The lighting setup that actually works at a campsite, and why one good headlamp beats a pile of cheap flashlights."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "LED headlamps"
+    query: "led headlamp"
+  - label: "Camping lanterns"
+    query: "led camping lantern"
 ---
 
 Lighting is cheap, but it's easy to either underbuy (fumbling with a phone flashlight while cooking) or overbuy (five different lanterns you don't need). Here's the setup that covers a first trip for well under $30 per person.

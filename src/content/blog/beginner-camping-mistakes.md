@@ -2,6 +2,11 @@
 title: "Beginner camping mistakes that ruin a first trip"
 description: "The most common first-time car camping mistakes, from gear to planning, and how to avoid each one."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Sleeping pads"
+    query: "camping sleeping pad"
+  - label: "LED headlamps"
+    query: "led headlamp"
 ---
 
 Most bad first camping trips come down to a handful of repeatable mistakes, not bad luck. Here's what trips up beginners most often, and the simple fix for each.

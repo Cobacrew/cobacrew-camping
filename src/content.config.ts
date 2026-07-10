@@ -7,6 +7,14 @@ const blog = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		pubDate: z.date(),
+		affiliateLinks: z
+			.array(
+				z.object({
+					label: z.string(),
+					query: z.string(),
+				})
+			)
+			.optional(),
 	}),
 });
 

@@ -2,6 +2,13 @@
 title: "Camp kitchen essentials on a budget"
 description: "Everything you need to actually cook real food at a campsite, without buying specialty camping products you don't need."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Two-burner propane stoves"
+    query: "two burner propane camp stove"
+  - label: "Camp cookware sets"
+    query: "camping cookware set"
+  - label: "Collapsible dish bins"
+    query: "collapsible camp sink dish bin"
 ---
 
 You don't need a dedicated "camp kitchen" product line to eat well outdoors. Most of what you need either doubles from your regular kitchen or costs very little new. Here's the actual list, split by what's worth buying specifically for camping and what you can just bring from home.

@@ -2,6 +2,17 @@
 title: "Car camping gear checklist for beginners"
 description: "Everything you actually need for your first car camping trip, organized by category, with budget-friendly picks and what to skip."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Car camping tents"
+    query: "car camping tent"
+  - label: "Sleeping pads"
+    query: "camping sleeping pad"
+  - label: "Two-burner propane stoves"
+    query: "two burner propane camp stove"
+  - label: "Coolers with drain plug"
+    query: "camping cooler with drain plug"
+  - label: "Headlamps"
+    query: "led headlamp"
 ---
 
 If you're car camping instead of backpacking, weight doesn't matter — but that also means it's easy to overspend on gear you don't need. This list covers what actually matters for a first trip, split into "get this" and "skip this for now."

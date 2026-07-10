@@ -2,6 +2,13 @@
 title: "Best sleeping bags under $50"
 description: "How to pick a sleeping bag under $50 that will actually keep you warm, and why the temperature rating on the tag isn't the whole story."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Budget sleeping bags"
+    query: "sleeping bag synthetic"
+  - label: "Sleeping bag liners"
+    query: "sleeping bag liner"
+  - label: "Sleeping pads"
+    query: "camping sleeping pad"
 ---
 
 Sleeping bags are one of the few items where getting it wrong doesn't just mean discomfort — a bag that's too warm-rated for the night you're actually camping means a genuinely miserable, cold sleep. Here's how to buy right under $50.

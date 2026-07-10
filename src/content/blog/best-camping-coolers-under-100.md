@@ -2,6 +2,11 @@
 title: "Best camping coolers under $100"
 description: "What actually matters in a budget cooler for car camping, and how to get multi-day ice retention without paying $300 for a premium brand."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Camping coolers"
+    query: "camping cooler with drain plug"
+  - label: "Reusable ice packs"
+    query: "reusable ice packs cooler"
 ---
 
 Premium rotomolded coolers can hold ice for a week and cost $300+. For a weekend or two a month, that's overkill. Here's what to look for under $100, and where the real tradeoffs are.

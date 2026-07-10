@@ -2,6 +2,11 @@
 title: "Car camping vs backpacking: what gear you actually need"
 description: "Why backpacking gear guides don't apply to car camping, and where you can save real money by ignoring ultralight advice."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Car camping tents"
+    query: "car camping tent"
+  - label: "Camping coolers"
+    query: "camping cooler with drain plug"
 ---
 
 A lot of camping gear advice online is written by and for backpackers, where every ounce matters because you're carrying it for miles. If you're car camping, most of that advice actively costs you money for no benefit. Here's where the two diverge.

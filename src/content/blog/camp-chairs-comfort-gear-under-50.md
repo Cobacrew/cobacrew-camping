@@ -2,6 +2,11 @@
 title: "Camp chairs and comfort gear worth buying under $50"
 description: "Which camp comfort upgrades are actually worth the money on a budget, and which ones you can skip on your first few trips."
 pubDate: 2026-07-09
+affiliateLinks:
+  - label: "Camping chairs"
+    query: "folding camping chair"
+  - label: "Folding camp tables"
+    query: "folding camp table"
 ---
 
 Comfort gear doesn't affect whether your trip is safe or functional the way shelter and sleep gear does — but it has an outsized effect on whether people actually enjoy themselves. Here's what's worth spending on under $50, and what to skip.
