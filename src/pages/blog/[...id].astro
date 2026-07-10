@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import AmazonLinks from '../../components/AmazonLinks.astro';
+import FeaturedPicks from '../../components/FeaturedPicks.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -37,6 +38,7 @@ const { Content } = await render(post);
 			Some links in this guide may be affiliate links. If you buy through them, Cobacrew
 			Camping may earn a small commission at no extra cost to you. See our <a href="/disclosure">full disclosure</a>.
 		</p>
+		<FeaturedPicks picks={post.data.featuredPicks} />
 		<AmazonLinks links={post.data.affiliateLinks} />
 		<Content />
 		<AmazonLinks links={post.data.affiliateLinks} />

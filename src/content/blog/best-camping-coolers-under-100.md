@@ -7,6 +7,11 @@ affiliateLinks:
     query: "camping cooler with drain plug"
   - label: "Reusable ice packs"
     query: "reusable ice packs cooler"
+featuredPicks:
+  - name: "Coleman Chiller 60qt Wheeled Cooler"
+    price: "$55"
+    why: "Over 16,000 reviews and rated Amazon's top pick for temperature retention — wheels make it easy to move once it's loaded with ice."
+    url: "https://amzn.to/4gvZcku"
 ---
 
 Premium rotomolded coolers can hold ice for a week and cost $300+. For a weekend or two a month, that's overkill. Here's what to look for under $100, and where the real tradeoffs are.

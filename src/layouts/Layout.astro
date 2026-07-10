@@ -23,6 +23,12 @@ const { title, description, image } = Astro.props;
 		{image && <meta property="og:image" content={image} />}
 		{image && <meta name="twitter:card" content="summary_large_image" />}
 		{image && <meta name="twitter:image" content={image} />}
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+			rel="stylesheet"
+		/>
 		<title>{title} | Cobacrew Camping</title>
 	</head>
 	<body>
@@ -46,11 +52,16 @@ const { title, description, image } = Astro.props;
 <style is:global>
 	:root {
 		color-scheme: light;
-		--ink: #1f2a20;
-		--ink-muted: #52604f;
-		--bg: #fbfaf5;
-		--accent: #3b6d11;
-		--border: #e1ddcc;
+		--ink: #2b2416;
+		--ink-muted: #6b6152;
+		--bg: #fbf7ee;
+		--bg-alt: #f2e9d6;
+		--accent: #b0501f;
+		--accent-dark: #8a3d16;
+		--green: #3b6d11;
+		--border: #e6dcc4;
+		--card-bg: #fffdf8;
+		--font-serif: "Fraunces", Georgia, serif;
 	}
 	* {
 		box-sizing: border-box;
@@ -63,80 +74,152 @@ const { title, description, image } = Astro.props;
 		line-height: 1.65;
 	}
 	header {
-		border-bottom: 1px solid var(--border);
+		border-bottom: 2px solid var(--ink);
+		background: var(--card-bg);
 	}
 	nav {
-		max-width: 780px;
+		max-width: 860px;
 		margin: 0 auto;
-		padding: 1rem 1.25rem;
+		padding: 1.1rem 1.25rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	nav .brand {
-		font-weight: 700;
-		font-size: 1.1rem;
+		font-family: var(--font-serif);
+		font-weight: 600;
+		font-size: 1.3rem;
 		color: var(--ink);
 		text-decoration: none;
+		letter-spacing: -0.01em;
 	}
-	nav a {
+	nav a:not(.brand) {
 		color: var(--ink-muted);
 		text-decoration: none;
+		font-weight: 500;
+	}
+	nav a:not(.brand):hover {
+		color: var(--accent);
 	}
 	main {
-		max-width: 780px;
+		max-width: 860px;
 		margin: 0 auto;
-		padding: 2rem 1.25rem 3rem;
+		padding: 2.5rem 1.25rem 3rem;
 	}
 	footer {
 		border-top: 1px solid var(--border);
-		padding: 1.5rem 1.25rem;
+		padding: 2rem 1.25rem;
 		text-align: center;
 		color: var(--ink-muted);
 		font-size: 0.9rem;
+		margin-top: 2rem;
 	}
 	footer a {
 		color: var(--accent);
 	}
 	h1, h2, h3 {
-		line-height: 1.25;
+		font-family: var(--font-serif);
+		line-height: 1.2;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+	h1 {
+		font-size: 2.5rem;
 	}
 	a {
 		color: var(--accent);
 	}
 	.card {
 		display: block;
-		padding: 1.25rem;
-		border: 1px solid var(--border);
-		border-radius: 10px;
 		text-decoration: none;
 		color: inherit;
-		margin-bottom: 1rem;
-		background: #fff;
+		background: var(--card-bg);
+		border: 1px solid var(--border);
+		border-radius: 14px;
+		overflow: hidden;
+		transition: transform 0.15s ease, box-shadow 0.15s ease;
+	}
+	.card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 18px rgba(43, 36, 22, 0.08);
+	}
+	.card img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+		object-position: center 30%;
+	}
+	.card-body {
+		padding: 1.1rem 1.25rem 1.35rem;
 	}
 	.card h2 {
 		margin: 0 0 0.4rem;
-		font-size: 1.15rem;
+		font-size: 1.2rem;
 		color: var(--ink);
 	}
 	.card p {
 		margin: 0;
 		color: var(--ink-muted);
+		font-size: 0.95rem;
 	}
 	.hero-image {
 		display: block;
-		max-width: 260px;
+		max-width: 320px;
 		width: 100%;
 		height: auto;
-		border-radius: 10px;
-		margin: 0 0 1.5rem;
+		border-radius: 14px;
+		margin: 0 0 1.75rem;
+		border: 1px solid var(--border);
 	}
 	.disclosure-note {
 		font-size: 0.85rem;
 		color: var(--ink-muted);
-		border-left: 3px solid var(--border);
+		border-left: 3px solid var(--accent);
 		padding: 0.5rem 0.9rem;
 		margin: 1.25rem 0;
-		background: #fff;
+		background: var(--card-bg);
+	}
+	.featured-pick {
+		background: var(--card-bg);
+		border: 1.5px solid var(--accent);
+		border-radius: 12px;
+		padding: 1.25rem 1.4rem;
+		margin: 1.25rem 0;
+	}
+	.featured-pick-label {
+		display: inline-block;
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--accent);
+		margin-bottom: 0.5rem;
+	}
+	.featured-pick h3 {
+		margin: 0 0 0.3rem;
+		font-size: 1.15rem;
+	}
+	.featured-pick .price {
+		font-weight: 600;
+		color: var(--ink);
+		margin: 0;
+	}
+	.featured-pick p.why {
+		margin: 0.5rem 0 0.9rem;
+		color: var(--ink-muted);
+	}
+	.featured-pick a.buy {
+		display: inline-block;
+		padding: 0.55rem 1.1rem;
+		background: var(--accent);
+		color: #fff;
+		border-radius: 8px;
+		text-decoration: none;
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+	.featured-pick a.buy:hover {
+		background: var(--accent-dark);
 	}
 </style>

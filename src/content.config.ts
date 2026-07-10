@@ -15,6 +15,16 @@ const blog = defineCollection({
 				})
 			)
 			.optional(),
+		featuredPicks: z
+			.array(
+				z.object({
+					name: z.string(),
+					price: z.string(),
+					why: z.string(),
+					url: z.string(),
+				})
+			)
+			.optional(),
 	}),
 });
 

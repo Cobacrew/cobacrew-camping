@@ -11,21 +11,47 @@ const posts = (await getCollection('blog')).sort(
 	title="Budget car camping gear guides"
 	description="Straightforward gear guides for beginners who want to camp without overspending."
 >
-	<h1>Camp more, spend less</h1>
-	<p>
-		Cobacrew Camping is for people just getting into car camping who don't want to
-		blow a paycheck on gear they're not sure they'll use. No sponsored hype, just
-		what's actually worth buying.
-	</p>
+	<section class="hero">
+		<h1>Camp more, spend less</h1>
+		<p>
+			Cobacrew Camping is for people just getting into car camping who don't want to
+			blow a paycheck on gear they're not sure they'll use. No sponsored hype, just
+			what's actually worth buying.
+		</p>
+	</section>
 
-	<section>
+	<section class="grid">
 		{
 			posts.map((post) => (
 				<a class="card" href={`/blog/${post.id}/`}>
-					<h2>{post.data.title}</h2>
-					<p>{post.data.description}</p>
+					<img src={`/pins/${post.id}.jpg`} alt="" loading="lazy" />
+					<div class="card-body">
+						<h2>{post.data.title}</h2>
+						<p>{post.data.description}</p>
+					</div>
 				</a>
 			))
 		}
 	</section>
 </Layout>
+
+<style>
+	.hero {
+		margin-bottom: 2.5rem;
+		max-width: 640px;
+	}
+	.hero p {
+		color: var(--ink-muted);
+		font-size: 1.05rem;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
+	}
+	@media (max-width: 620px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

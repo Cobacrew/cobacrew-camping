@@ -1,0 +1,32 @@
+---
+interface Pick {
+	name: string;
+	price: string;
+	why: string;
+	url: string;
+}
+
+interface Props {
+	picks?: Pick[];
+}
+
+const { picks } = Astro.props;
+---
+
+{
+	picks && picks.length > 0 && (
+		<div class="featured-picks">
+			{picks.map((pick) => (
+				<div class="featured-pick">
+					<span class="featured-pick-label">Our pick</span>
+					<h3>{pick.name}</h3>
+					<p class="price">{pick.price}</p>
+					<p class="why">{pick.why}</p>
+					<a class="buy" href={pick.url} target="_blank" rel="nofollow sponsored noopener">
+						Check price on Amazon
+					</a>
+				</div>
+			))}
+		</div>
+	)
+}
