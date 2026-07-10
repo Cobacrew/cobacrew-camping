@@ -26,6 +26,13 @@ const { Content } = await render(post);
 >
 	<article>
 		<h1>{post.data.title}</h1>
+		<img
+			class="hero-image"
+			src={`/pins/${post.id}.jpg`}
+			alt={post.data.title}
+			width="1000"
+			height="1500"
+		/>
 		<p class="disclosure-note">
 			Some links in this guide may be affiliate links. If you buy through them, Cobacrew
 			Camping may earn a small commission at no extra cost to you. See our <a href="/disclosure">full disclosure</a>.
