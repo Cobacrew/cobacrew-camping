@@ -24,6 +24,8 @@ const { Content } = await render(post);
 	title={post.data.title}
 	description={post.data.description}
 	image={`https://cobacrew-camping.vercel.app/pins/${post.id}.jpg`}
+	type="article"
+	pubDate={post.data.pubDate}
 >
 	<article>
 		<h1>{post.data.title}</h1>
